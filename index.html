@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Mapbox - Route Finder</title>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="controls">
+            <label for="fromLocation">From:</label>
+            <input type="text" id="fromLocation" placeholder="Enter start location">
+            <br>
+
+            <label for="toLocation">To:</label>
+            <input type="text" id="toLocation" placeholder="Enter destination">
+            
+            <button id="searchLocations">Search Locations</button><br>
+
+            <label for="nearbyPlaces">Nearby Places:</label>
+            <select id="nearbyPlaces" class="category-select">
+                <option value="">Select a category</option>
+                <option value="restaurant">Restaurants</option>
+                <option value="park">Parks</option>
+                <option value="cafe">Cafes</option>
+            </select>
+
+            <button id="fetchNearby">Fetch Nearby Places</button>
+            <br><br>
+            
+            <button id="calculateDistance">Calculate Distance</button>
+
+            <select id="transportMode">
+                <option value="driving">Driving</option>
+                <option value="walking">Walking</option>
+                <option value="cycling">Cycling</option>
+            </select>
+            <button id="getRoute">Get Route</button>
+        </div>
+        <div id="map"></div>
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+        <script src="https://cdn.jsdelivr.net/npm/@turf/turf"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
